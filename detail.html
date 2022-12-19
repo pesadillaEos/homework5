@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #item {
+            position: relative;
+            width: 640px;
+            height: auto;
+            padding: 15px 20px;
+            margin: 10px auto;
+            border: 1px solid black;
+            float: left;
+        }
+        #item2 {
+            position: relative;
+            width: 640px;
+            height: auto;
+            padding: 15px 20px;
+            margin: 10px auto;
+            border: 1px solid black;
+            float: left;
+        }
+        button {
+            background: rgba(255,255,255,0.7);
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 30px;
+        }
+        .over {
+            position: absolute;
+            left: 30px;
+            bottom: 30px;
+        }
+        .detail {
+            text-align: justify;
+            line-height: 1.8em;
+            display: none;
+        }
+        h4 {
+            text-align: center;
+        }
+    </style>
+    <title> 상세내용보기 </title>
+</head>
+<body>
+    <div id="item">
+        <img src="img/image-1.jpg" alt="뭐더라">
+        <button id="open" class="over" onclick="showDetail()"> 상세설명 보기 </button>
+        <div id="sangse" class="detail">
+            <h4> 뭔가 예쁨 </h4>
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rationibus imbutus conversam videretur congue delectari. Praeteritas venenatis petat iustitia pertinerent graviterque. Perciperet contra tamen copulationesque inveniri sapienti historiae vivendum variari altera. Oderis paria praesenti doceat sanos optimi posidonium cernimus interesset dominorum. Ipsarum diceretur diuturnitatem, militaris praetore interrogare sapientia laudari. Motu nibh longinquitate qui ignem tali utilitas aliquod utilior sua. Indoctum oportere posuit brevis apud quantumcumque incurreret, fugiamus intellegimus. Sententia hominem stare posidonium nullam medeam viros ferentur quosque tot desiderat. Fringilla praeterierunt, dolor lacus putem primorum consistat iis officii albam. </p>
+            <button id="close" onclick="hideDetail()"> 상세설명 닫기</button>
+        </div>
+    </div>
+
+    <div id="item2">
+        <img src="img/image-2.jpg" alt="두번째">
+        <button id="open2" class="over" onclick="showDetai2()"> 상세설명 보기 </button>
+        <div id="sangse2" class="detail">
+            <h4> 이거도 예쁨 </h4>
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rationibus imbutus conversam videretur congue delectari. Praeteritas venenatis petat iustitia pertinerent graviterque. Perciperet contra tamen copulationesque inveniri sapienti historiae vivendum variari altera. Oderis paria praesenti doceat sanos optimi posidonium cernimus interesset dominorum. Ipsarum diceretur diuturnitatem, militaris praetore interrogare sapientia laudari. Motu nibh longinquitate qui ignem tali utilitas aliquod utilior sua. Indoctum oportere posuit brevis apud quantumcumque incurreret, fugiamus intellegimus. Sententia hominem stare posidonium nullam medeam viros ferentur quosque tot desiderat. Fringilla praeterierunt, dolor lacus putem primorum consistat iis officii albam. </p>
+            <button id="close2" onclick="hideDetai2()"> 상세설명 닫기</button>
+        </div>
+    </div>
+    <!-- 자바스크립트 삽입 -->
+        <script>
+            function showDetail(){
+                document.querySelector('#sangse').style.display='block';
+                document.querySelector('#open').style.display='none';
+            }
+
+            function hideDetail(){
+                document.querySelector('#sangse').style.display='none';
+                document.querySelector('#open').style.display='block';
+            }
+
+            function showDetai2(){
+                document.querySelector('#sangse2').style.display='block';
+                document.querySelector('#open2').style.display='none';
+            }
+
+            function hideDetai2(){
+                document.querySelector('#sangse2').style.display='none';
+                document.querySelector('#open2').style.display='block';
+            }
+        </script>
+</body>
+</html>
